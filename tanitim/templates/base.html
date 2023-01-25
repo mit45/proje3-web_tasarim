@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+<head>
+    <title>Web Tasarım</title>
+    <link rel="stylesheet" href="{% static 'boostrap.min.css' %}">
+    <script src="{% static 'bootstrap.bundle.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="{% static 'script.js' %}"></script>
+</head>
+<body>
+    <div>
+        {% include "partials/navbar.html" %}
+        {% block navbar %}{% endblock %}
+        <div>
+            {% block anasayfa %}{% endblock %}
+            {% block arama_sayfasi %}{% endblock %}
+            {% block urun_sayfasi %}{% endblock %}
+            {% block forum %}{% endblock %}
+        </div>
+        {% include "partials/footer.html" %}
+        {% block footer %}{%endblock%}
+    </div>
+</body>
+</html>
