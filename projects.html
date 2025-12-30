@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projeler</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section class="filters">
+      <select id="filter-category">
+        <option value="">Tüm Kategoriler</option>
+        <option value="Web">Web</option>
+        <option value="Masaüstü">Masaüstü</option>
+        <option value="POS">POS</option>
+        <option value="Oyun">Oyun</option>
+      </select>
+      <input id="search-box" placeholder="Ara..." />
+      <input id="price-min" type="number" placeholder="Min Fiyat" />
+      <input id="price-max" type="number" placeholder="Max Fiyat" />
+    </section>
+
+    <section class="projects-grid" id="projects-grid"></section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/ui/projectsPage.js"></script>
+</body>
+</html>

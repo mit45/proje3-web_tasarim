@@ -1,0 +1,38 @@
+[
+  {
+    "title": "E-Ticaret Platformu",
+    "description": "Tam özellikli bir e-ticaret altyapısı: ürün yönetimi, ödeme entegrasyonu (simülasyon), mobil uyumlu arayüz.",
+    "price": 750,
+    "tags": ["Web", "E-Ticaret"],
+    "isActive": true,
+    "image": "assets/img/project1.svg",
+    "features": ["Ürün Yönetimi","Ödeme Entegrasyonu","Mobil Uyumlu"]
+  },
+  {
+    "title": "POS Sistemi",
+    "description": "Küçük işletmeler için hızlı POS çözümü, sipariş takibi ve raporlama.",
+    "price": 300,
+    "tags": ["POS","Masaüstü"],
+    "isActive": true,
+    "image": "assets/img/project2.svg",
+    "features": ["Sipariş Takibi","Raporlama","Barkod Desteği"]
+  },
+  {
+    "title": "Mobil Uygulama - Görev Yönetimi",
+    "description": "Ekipler için basit görev yönetimi uygulaması, mobil-first tasarım.",
+    "price": 500,
+    "tags": ["Mobil","Web"],
+    "isActive": true,
+    "image": "assets/img/project3.svg",
+    "features": ["Görev Atama","Durum Takibi","Push Bildirimleri (demo)"]
+  },
+  {
+    "title": "Retro Oyun",
+    "description": "Tarayıcıda oynanabilen küçük bir retro oyun prototipi.",
+    "price": 150,
+    "tags": ["Oyun","Web"],
+    "isActive": true,
+    "image": "assets/img/project4.svg",
+    "features": ["Highscore","Klavyeyle Kontrol","Renkli Pixel Grafikler"]
+  }
+]

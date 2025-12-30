@@ -1,0 +1,16 @@
+[
+  {
+    "uid": "user_demo_1",
+    "name": "Ahmet",
+    "surname": "Topuz",
+    "email": "ahmet@example.com",
+    "role": "user"
+  },
+  {
+    "uid": "user_demo_2",
+    "name": "Elif",
+    "surname": "Kara",
+    "email": "elif@example.com",
+    "role": "user"
+  }
+]

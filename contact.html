@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>İletişim</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section class="contact-form">
+      <h2>İletişim</h2>
+      <form id="contactForm">
+        <label>Ad</label>
+        <input id="contact-name" required />
+        <label>E-Posta</label>
+        <input id="contact-email" type="email" required />
+        <label>Mesaj</label>
+        <textarea id="contact-message" required></textarea>
+        <button class="btn primary" type="submit">Gönder</button>
+      </form>
+      <div id="contact-feedback" role="status"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/ui/contactPage.js"></script>
+</body>
+</html>

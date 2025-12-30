@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Giriş / Kayıt</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main class="container">
+    <section class="auth-box">
+      <h2>Giriş Yap</h2>
+      <form id="loginForm">
+        <label for="login-email">E-Posta</label>
+        <input id="login-email" type="email" required />
+        <label for="login-password">Şifre</label>
+        <input id="login-password" type="password" required />
+        <button class="btn primary" type="submit">Giriş Yap</button>
+      </form>
+
+
+      <p class="mt-18">Hesabınız yok mu? <a href="#" id="showRegister">Kayıt Ol</a></p>
+
+      <hr style="margin:18px 0" />
+
+      <div id="registerBox" class="hidden">
+        <h3>Kayıt Ol</h3>
+        <form id="registerForm">
+          <label for="reg-email">E-Posta</label>
+          <input id="reg-email" type="email" required />
+          <label for="reg-password">Şifre</label>
+          <input id="reg-password" type="password" required />
+          <button class="btn primary" type="submit">Kayıt Ol</button>
+        </form>
+      </div>
+
+      <p class="mt-18">Şifre mi unuttunuz? <a href="#" id="showReset">Sıfırla</a></p>
+      <div id="resetBox" class="hidden mt-18">
+        <form id="resetForm">
+          <label for="reset-email">E-Posta</label>
+          <input id="reset-email" type="email" required />
+          <button class="btn" type="submit">Sıfırlama Maili Gönder</button>
+        </form>
+      </div>
+
+      <div id="authFeedback" class="mt-18" style="color:#c53030"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/ui/authPage.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Seed - Veri Yükleme</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main class="container">
+    <h2>Veri Seed Aracı</h2>
+    <p>Bu sayfa, örnek JSON verilerini Firestore'a yazmak için kullanılabilir. Önce <strong>assets/js/config/firebaseConfig.js</strong> içine kendi Firebase config'inizi ekleyin ve Authentication + Firestore etkin olsun.</p>
+    <button id="btn-seed" class="btn primary">Verileri Yükle</button>
+    <pre id="seed-log" class="seed-log"></pre>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="brand"><img src="assets/img/logo.svg" alt="Logo" class="brand-logo" style="height:28px;vertical-align:middle"> <span>BenimAdım</span></div>
+      <div class="links">
+        <ul>
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="projects.html">Projeler</a></li>
+          <li><a href="about.html">Hakkımda</a></li>
+          <li><a href="contact.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <div>info@ornekmail.com</div>
+        <div>+90 555 123 4567</div>
+      </div>
+    </div>
+    <div class="mt-18" style="text-align:center;color:rgba(255,255,255,0.75)">© 2025 - BenimAdım - Tüm hakları saklıdır.</div>
+  </footer>
+
+  <script type="module">
+    import { runSeed } from './assets/js/data/seed.js';
+    import './assets/js/main.js';
+    const btn = document.getElementById('btn-seed');
+    const log = document.getElementById('seed-log');
+    const originalLog = console.log;
+    console.log = function(...args){ originalLog.apply(console,args); log.textContent += args.join(' ') + '\n'; };
+    btn.addEventListener('click', async ()=>{
+      try{ await runSeed(); }catch(err){ console.error(err); alert('Hata: konsolu kontrol edin.'); }
+    });
+  </script>
+</body>
+</html>
