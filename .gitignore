@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+.env
+.firebase/
+*.log
+.vscode/
+npm-debug.log*
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+Thumbs.db
+*.bak
+*.tmp
+# OneDrive artifacts
+~$*
