@@ -3,7 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="assets/img/favicon.svg" />
   <title>İletişim</title>
+  <meta name="description" content="İletişim formu ve ofis bilgileri — Ümit Topuz Dijital Çözümler. Teklif, işbirliği ve destek talepleri için ulaşın." />
+  <link rel="canonical" href="https://umittopuz.com/contact.html" />
+  <meta name="keywords" content="iletişim, teklif, işbirliği, Ümit Topuz" />
+  <meta property="og:title" content="İletişim — Ümit Topuz" />
+  <meta property="og:description" content="Teklif ve işbirliği talepleri için iletişime geçin. Telefon ve e-posta bilgileri burada." />
+  <meta property="og:url" content="https://umittopuz.com/contact.html" />
+  <meta name="robots" content="index,follow" />
+  <link rel="alternate" hreflang="tr" href="https://www.example.com/contact.html" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "url":"https://umittopuz.com/contact.html",
+    "name":"İletişim — Ümit Topuz",
+    "description":"İletişim formu ve ofis bilgileri — Ümit Topuz Dijital Çözümler."
+  }
+  </script>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -11,17 +30,71 @@
 
   <main class="container">
     <section class="contact-form">
-      <h2>İletişim</h2>
-      <form id="contactForm">
-        <label>Ad</label>
-        <input id="contact-name" required />
-        <label>E-Posta</label>
-        <input id="contact-email" type="email" required />
-        <label>Mesaj</label>
-        <textarea id="contact-message" required></textarea>
-        <button class="btn primary" type="submit">Gönder</button>
-      </form>
-      <div id="contact-feedback" role="status"></div>
+      <div class="contact-grid">
+        <div class="contact-panel">
+          <h1>İletişim</h1>
+          <p class="muted">Projeler, işbirlikleri veya teklif talepleri için aşağıdaki formu doldurabilirsiniz. Telefonla hızlı irtibat için telefon numaranızı bırakın; size en kısa sürede dönüş yapılacaktır.</p>
+
+          <form id="contactForm">
+            <label>Ad</label>
+            <input id="contact-name" required />
+
+            <label>E-Posta</label>
+            <input id="contact-email" type="email" required />
+
+            <label>Telefon</label>
+            <input id="contact-phone" type="tel" placeholder="+90 (5xx) xxx xx xx" />
+
+            <label>Mesaj</label>
+            <textarea id="contact-message" rows="6" required></textarea>
+
+            <div style="display:flex;gap:12px;align-items:center;margin-top:12px">
+              <button class="btn primary" type="submit">Gönder</button>
+              <span class="muted">Veya doğrudan arayın: <strong style="color:var(--primary-dark);">+90 (532) 123 45 67</strong></span>
+            </div>
+          </form>
+
+          <div id="contact-feedback" role="status" style="margin-top:12px"></div>
+        </div>
+
+        <aside class="contact-info">
+          <div class="contact-card">
+            <h4>Ofis Bilgileri</h4>
+            <p class="muted">Ümit Topuz Dijital Çözümler</p>
+            <p style="margin:8px 0"><strong>Adres:</strong><br>İstanbul, Türkiye</p>
+            <p style="margin:8px 0"><strong>Telefon:</strong><br>+90 (532) 123 45 67</p>
+            <p style="margin:8px 0"><strong>E-Posta:</strong><br>info@ornekmail.com</p>
+          </div>
+
+          <div class="contact-card" style="margin-top:12px">
+            <h4>Çalışma Saatleri</h4>
+            <p class="muted" style="margin:6px 0">Hafta içi: 09:00 — 18:00</p>
+            <p class="muted" style="margin:6px 0">Hafta sonu: Randevu ile</p>
+          </div>
+
+          <div class="contact-card" style="margin-top:12px">
+            <h4>Sosyal</h4>
+            <p class="muted">Bizi sosyal ağlarda takip edin</p>
+            <div class="socials contact-socials" aria-label="Sosyal medya">
+              <a class="social-link" href="#" aria-label="LinkedIn" title="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-14h4v2.2c.9-1.3 2.8-2.2 4-2.2zM2 9h4v14h-4zM4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill="#ffffff"/></svg>
+              </a>
+              <a class="social-link" href="#" aria-label="GitHub" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.5v-1.9c-3.3.7-4-1.6-4-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1 .1.6 1.9 2.8 1.3.1-.9.4-1.4.7-1.7-2.6-.3-5.4-1.3-5.4-5.8 0-1.3.4-2.4 1.1-3.3-.1-.3-.5-1.6.1-3.3 0 0 .9-.3 3 .1a10 10 0 0 1 5.5 0c2.1-.4 3-.1 3-.1.6 1.7.2 3 .1 3.3.7.9 1.1 2 1.1 3.3 0 4.5-2.8 5.5-5.4 5.8.4.3.7 1 .7 2v3c0 .3.2.6.8.5A12 12 0 0 0 12 .5z" fill="#ffffff"/></svg>
+              </a>
+              <a class="social-link" href="#" aria-label="Twitter" title="Twitter">
+                <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43.36a9.06 9.06 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.5 0c-2.5 0-4.5 2.2-4.5 4.9 0 .38.04.75.12 1.1A12.94 12.94 0 0 1 1.64.88 4.82 4.82 0 0 0 2 6.1a4.47 4.47 0 0 1-2-.56v.06c0 2.2 1.54 4.04 3.58 4.46a4.52 4.52 0 0 1-2 .08c.56 1.8 2.2 3.1 4.14 3.14A9.06 9.06 0 0 1 0 18.54 12.78 12.78 0 0 0 6.92 20c8.3 0 12.85-7.1 12.85-13.27 0-.2 0-.39-.02-.58A9.22 9.22 0 0 0 23 3z"/></svg>
+              </a>
+              <a class="social-link" href="#" aria-label="Instagram" title="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.5A4.5 4.5 0 1 0 16.5 13 4.5 4.5 0 0 0 12 8.5zm5.2-3.6a1.08 1.08 0 1 0 1.08 1.08A1.08 1.08 0 0 0 17.2 4.9z"/></svg>
+              </a>
+              <a class="social-link" href="#" aria-label="Facebook" title="Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M22 12a10 10 0 1 0-11 9.95V14.7h-2.9v-3.3H11V9.2c0-2.9 1.72-4.5 4.36-4.5 1.26 0 2.58.22 2.58.22v2.84h-1.45c-1.43 0-1.87.88-1.87 1.78v2.16h3.18l-.51 3.3h-2.67v7.25A10 10 0 0 0 22 12z"/></svg>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
     </section>
   </main>
 

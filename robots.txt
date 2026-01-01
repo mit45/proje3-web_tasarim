@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /assets/js/ui/
+Disallow: /node_modules/
+Allow: /
+
+Sitemap: https://umittopuz.com/sitemap.xml
+Host: https://umittopuz.com

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="assets/img/favicon.svg" />
+  <title>Yönetici Paneli — Ümit Topuz</title>
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+  <main class="admin-wrap">
+    <header>
+      <h1>Yönetici Paneli</h1>
+      <p class="muted">Sayfa içeriklerini düzenleyin, projeleri yönetin ve değişiklikleri dışa aktarın.</p>
+    </header>
+
+    <section id="login-section">
+      <p>Admin paneline erişim için lütfen Google hesabınızla giriş yapın.</p>
+      <div style="margin-top:8px">
+        <button id="google-login" class="btn">Google ile Giriş</button>
+      </div>
+      <p class="note">Not: Canlı ortam için admin kullanıcılarını Firestore `admins` koleksiyonuna ekleyin veya custom claim kullanın.</p>
+    </section>
+
+    <section id="panel" class="hidden">
+      <nav class="admin-nav">
+        <label style="display:inline-flex;align-items:center;gap:8px;padding:6px 8px;border:1px solid #e6eefb;border-radius:8px;background:#fff">
+          <input type="checkbox" id="use-firebase" />
+          <span>Firebase ile Senkronize Et</span>
+        </label>
+        <button data-section="site">Site Bilgileri</button>
+        <button data-section="projects">Projeler</button>
+        <button data-section="meta">Meta / SEO</button>
+        <button id="export-btn">Dışa Aktar (JSON)</button>
+        <input id="import-file" type="file" accept="application/json" style="display:none" />
+        <button id="import-btn">İçe Aktar</button>
+        <button id="push-firebase">Tümünü Firebase'e Gönder</button>
+        <button id="pull-firebase">Firebase'den Çek</button>
+        <button id="logout-btn" class="danger">Çıkış</button>
+      </nav>
+      <div id="sync-status" style="margin-bottom:8px;color:#0b63d8;display:none">Firebase senkronizasyonu aktif.</div>
+
+      <div id="sections">
+        <div id="site" class="panel-section">
+          <h2>Site Bilgileri</h2>
+          <label>Site Başlığı</label>
+          <input id="site-title" />
+          <label>Site Açıklaması</label>
+          <textarea id="site-desc"></textarea>
+          <label>Logo URL</label>
+          <input id="site-logo" />
+          <button id="save-site">Kaydet</button>
+        </div>
+
+        <div id="projects" class="panel-section hidden">
+          <h2>Projeler</h2>
+          <div id="projects-list"></div>
+          <button id="new-project">Yeni Proje Ekle</button>
+        </div>
+
+        <div id="meta" class="panel-section hidden">
+          <h2>Meta / SEO</h2>
+          <label>Ana Sayfa Title</label>
+          <input id="meta-home-title" />
+          <label>Ana Sayfa Description</label>
+          <textarea id="meta-home-desc"></textarea>
+          <button id="save-meta">Kaydet</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="admin-foot">Bu panel demo amaçlıdır. Değişiklikler önce localStorage'a kaydedilir; repo'ya yazmak için Dışa Aktar > commit yapın.</footer>
+  </main>
+
+  <script type="module" src="assets/js/admin.js"></script>
+</body>
+</html>

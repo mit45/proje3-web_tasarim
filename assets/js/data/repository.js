@@ -127,6 +127,60 @@ export async function createProject(data) {
   return docRef.id;
 }
 
+export async function fetchAllProjects(){
+  try{
+    const docs = await getDocs(query(collection(db, 'projects'), orderBy('createdAt','desc')));
+    const items = [];
+    docs.forEach(d => items.push({ id: d.id, ...d.data() }));
+    return items;
+  }catch(e){
+    console.warn('fetchAllProjects failed', e);
+    throw e;
+  }
+}
+
+export async function isAdmin(uid, email){
+  try{
+    if(uid){
+      const d = await getDoc(doc(db, 'admins', uid));
+      if(d && d.exists()) return true;
+    }
+    if(email){
+      const q = query(collection(db, 'admins'), where('email','==', email));
+      const snap = await getDocs(q);
+      return snap && snap.size > 0;
+    }
+    return false;
+  }catch(e){
+    console.warn('isAdmin check failed', e);
+    return false;
+  }
+}
+
+export async function updateProject(id, data){
+  try{
+    const ref = doc(db, 'projects', id);
+    await updateDoc(ref, { ...data, updatedAt: serverTimestamp() });
+    return true;
+  }catch(e){
+    console.warn('updateProject failed', e);
+    throw e;
+  }
+}
+
+export async function deleteProject(id){
+  try{
+    await import('https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js').then(mod=>{
+      const { deleteDoc, doc } = mod;
+      return deleteDoc(doc(db, 'projects', id));
+    });
+    return true;
+  }catch(e){
+    console.warn('deleteProject failed', e);
+    throw e;
+  }
+}
+
 export async function createOrUpdateUser(uid, data) {
   const ref = doc(db, 'users', uid);
   await setDoc(ref, { ...data, uid, createdAt: serverTimestamp() }, { merge: true });

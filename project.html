@@ -3,14 +3,87 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="assets/img/favicon.svg" />
   <title>Proje Detay</title>
+  <meta name="description" content="Proje detayı: özellikler, demo ve satın alma bilgileri." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://umittopuz.com/project.html" />
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="alternate" hreflang="tr" href="https://umittopuz.com/project.html" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","url":"https://umittopuz.com/project.html","name":"Proje Detay","description":"Proje detayı: özellikler, demo ve satın alma bilgileri."}
+  </script>
+  <!-- Product meta placeholders (fill dynamically per project) -->
+  <meta name="product-name" content="Proje Başlığı" />
+  <meta name="product-description" content="Kısa proje açıklaması buraya gelecek." />
+  <meta name="price" content="" />
+  <meta name="priceCurrency" content="TRY" />
+  <meta name="availability" content="http://schema.org/InStock" />
+  <meta name="sku" content="" />
+  <meta name="brand" content="Ümit Topuz" />
+  <meta name="keywords" content="web tasarım, proje, e-ticaret, yazılım" />
+  <meta name="author" content="Ümit Topuz" />
 </head>
 <body>
   <header id="site-header"></header>
 
   <main class="container">
-    <section id="project-detail"></section>
+    <section id="project-detail">
+        <h1 id="project-title">Proje Detayı</h1>
+      <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"https://umittopuz.com/"},
+          {"@type":"ListItem","position":2,"name":"Projeler","item":"https://umittopuz.com/projects.html"},
+          {"@type":"ListItem","position":3,"name":"Proje Detayı","item":"https://umittopuz.com/project.html"}
+        ]
+      }
+      </script>
+
+      <script>
+      // Dynamically create Product + Offer JSON-LD from meta tags if provided
+      (function(){
+        try{
+          const get = name => document.querySelector(`meta[name="${name}"]`)?.getAttribute('content') || '';
+          const name = get('product-name');
+          if(!name) return; // no product meta provided
+          const description = get('product-description');
+          const price = get('price');
+          const currency = get('priceCurrency') || 'TRY';
+          const availability = get('availability') || 'http://schema.org/InStock';
+          const sku = get('sku');
+          const brand = get('brand') || 'Ümit Topuz';
+
+          const product = {
+            '@context':'https://schema.org',
+            '@type':'Product',
+            'name': name,
+            'description': description,
+            'sku': sku || undefined,
+            'brand': { '@type':'Brand', 'name': brand }
+          };
+
+          if(price){
+            product.offers = {
+              '@type':'Offer',
+              'price': price,
+              'priceCurrency': currency,
+              'availability': availability,
+              'url': window.location.href
+            };
+          }
+
+          const s = document.createElement('script');
+          s.type = 'application/ld+json';
+          s.text = JSON.stringify(product);
+          document.head.appendChild(s);
+        }catch(e){console.warn('product ld error', e)}
+      })();
+      </script>
+    </section>
   </main>
 
   <footer id="site-footer"></footer>

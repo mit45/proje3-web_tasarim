@@ -3,8 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="assets/img/favicon.svg" />
   <title>Projelerim - Ana Sayfa</title>
+  <meta name="description" content="Ümit Topuz'un projeleri: özel web tasarım, e-ticaret ve kurumsal yazılım çözümleri. Hemen keşfedin ve satın alın." />
+  <meta name="keywords" content="web tasarım, e-ticaret, yazılım, freelance, projeler" />
+  <link rel="canonical" href="https://umittopuz.com/" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+  <!-- Open Graph -->
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Projelerim - Ümit Topuz" />
+  <meta property="og:description" content="Özel web tasarım, e-ticaret ve kurumsal yazılım projeleri. Sizin için çözümler üretiyoruz." />
+  <meta property="og:url" content="https://umittopuz.com/" />
+  <meta property="og:image" content="https://umittopuz.com/assets/img/og-image.svg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Projelerim - Ümit Topuz" />
+  <meta name="twitter:description" content="Özel web tasarım, e-ticaret ve kurumsal yazılım projeleri." />
+  <meta name="twitter:image" content="https://umittopuz.com/assets/img/og-image.svg" />
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {"@type": "WebSite", "@id": "https://umittopuz.com/#website", "url": "https://umittopuz.com/", "name": "Projelerim - Ümit Topuz"},
+      {"@type": "Organization", "@id": "https://umittopuz.com/#organization", "name": "Ümit Topuz Dijital Çözümler", "url": "https://umittopuz.com/", "logo": "https://umittopuz.com/assets/img/logoblack.png"}
+    ]
+  }
+  </script>
+  <meta name="robots" content="index,follow" />
+  <link rel="alternate" hreflang="tr" href="https://umittopuz.com/" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","url":"https://umittopuz.com/","name":"Projelerim - Ana Sayfa","description":"Ümit Topuz'un projeleri: özel web tasarım, e-ticaret ve kurumsal yazılım çözümleri."}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"https://umittopuz.com/"}
+    ]
+  }
+  </script>
 </head>
 <body>
   <header id="site-header"></header>
@@ -57,9 +99,30 @@
       <div class="card-grid" id="featured-grid"></div>
     </section>
 
-    <section class="about-teaser container">
-      <h3>Hakkımda</h3>
-      <p>Kısa bir tanıtım için <a href="about.html">Hakkımda</a> sayfasını ziyaret edin.</p>
+    <section class="about-section container" id="about">
+      <div class="about-inner">
+        <div class="about-media">
+          <img src="assets/img/teams1.png" alt="Hakkımızda görseli">
+        </div>
+        <div class="about-content">
+          <h2>Hakkımızda</h2>
+          <p class="lead">Yaratıcı tasarım ve sağlam teknoloji birleşimiyle, markaların dijital dönüşümüne liderlik ediyoruz. Kurumsal kimliğinize uygun, iş hedeflerinize değer katan web çözümleri üretiriz.</p>
+
+          <p>Ekibimiz; kullanıcı deneyimi, performans ve güvenliği ön planda tutarak; fikirden yayına, bakım ve geliştirmeye kadar eksiksiz hizmet sunar. Sektörel deneyimimiz ve müşteri odaklı yaklaşımımızla kısa sürede somut sonuçlar elde etmenize yardımcı oluruz.</p>
+
+          <ul class="about-features">
+            <li><strong>Strateji & Planlama:</strong> İş hedeflerinize uygun yol haritası ve işlevsel gereksinimler.</li>
+            <li><strong>Tasarım & UX:</strong> Marka kimliğine uygun, dönüşüm odaklı arayüzler.</li>
+            <li><strong>Geliştirme:</strong> Ölçeklenebilir, performanslı ve güvenli altyapılar.</li>
+            <li><strong>Destek & Eğitim:</strong> Yayına alma sonrası destek ve ekip içi eğitimler.</li>
+          </ul>
+
+          <div class="about-ctas">
+            <a class="btn primary" href="about.html">Daha Fazla Bilgi</a>
+            <a class="btn" href="contact.html">İletişime Geç</a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
